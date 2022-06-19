@@ -1,0 +1,17 @@
+.header {
+    margin-bottom: var(--spacing-large);
+    padding: var(--spacing);
+    background-color: var(--secondary-black);
+}
+
+@media only screen and (min-width: 640px) {
+    .header {
+        margin-bottom: 4rem;
+    }
+}
+
+.header-title {
+    max-width: 680px;
+    margin: 0 auto;
+    text-decoration: underline;
+}

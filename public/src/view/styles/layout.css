@@ -1,0 +1,61 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: le-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--primary-black);
+    color: var(--primary-text-color);
+}
+
+main {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--secondary-green);
+    text-decoration: none;
+}
+
+small {
+    display: block;
+}
+
+.heading {
+    margin: 0 var(--spacing) var(--spacing-large);
+}
+
+.cta-text {
+    margin-left: 0.25rem;
+}
+
+/* 
+    The 'clip pattern' is used to hide the content visually,
+    yet provide the content to screen readers.
+*/
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

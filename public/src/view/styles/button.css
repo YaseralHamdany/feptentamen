@@ -1,0 +1,25 @@
+.button,
+.secondary-button {
+    padding: var(--spacing-small) var(--spacing);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s ease-out;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--primary-green);
+    border: 1px solid #357a8d;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 6px -6px black;
+    color: var(--primary-text-color);
+    text-decoration:none;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-text-color);
+}

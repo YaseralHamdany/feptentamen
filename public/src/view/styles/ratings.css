@@ -1,0 +1,23 @@
+.rating-label {
+    display: inline-block;
+}
+
+.rating-label:hover {
+    cursor: pointer;
+}
+
+.rating-custom::before {
+    content: '';
+    display: block;
+    background: url("../../../icons/thumbs-up.svg") no-repeat 50% 50%;
+    background-size: cover;
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.rating-label:hover .rating-custom::before,
+.rating-input:checked + .rating-custom::before,
+.rating-input-checked + .rating-custom::before,
+.rating-input-clicked + .rating-custom::before  {
+    background-image: url("../../../icons/thumbs-up-green.svg");
+}

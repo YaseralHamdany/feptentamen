@@ -1,0 +1,13 @@
+:root {
+    --primary-black: #232931;
+    --secondary-black: #393e46;
+    --primary-green: #255663;
+    --secondary-green: #204a55;
+    --primary-text-color: #fff;
+    --border-color: #929292;
+    --border-radius: 4px;
+
+    --spacing: 1rem;
+    --spacing-large: 2rem;
+    --spacing-small: 0.5rem;
+}

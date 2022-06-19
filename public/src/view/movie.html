@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="HU">
+    <meta name="description" content="HU Movie Data Base">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="movie.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUMDB</title>
+    <script type="module" src="./movie.mjs"></script>
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">HUMDB</h1>
+    </header>
+    <main>
+        <section>
+            
+            <div class="heading movies-heading">
+                <h2 class="movies-heading-title">Movies</h2>
+            </div>
+
+            <div class="movies" data-movies>
+
+                <template id="movie-template">
+                    <article class="movie" id="moviename">
+                        <img alt="" src="" class="movie-image">     
+                        <div class="movie-content">
+                            <h1 class="movie-title"></h1>
+                            <p class="movie-description"></p>
+                        </div>
+                    </article>
+                </template>
+                
+            </div>
+        </section>
+
+        <dialog id="view-movie-dialog" class="movie-dialog">
+            <img alt="" src="" class="movie-image movie-dialog-image">  
+            <div class="movie-content">
+                <h2 class="movie-title"></h2>
+                <button class="button movie-edit-button">
+                    <span class="visually-hidden">Edit movie</span>
+                    <img alt="" src="/icons/edit.svg">
+                </button>
+                <time class="movie-date"></time>
+                <p class="movie-description"></p>
+                <div class="movie-rating-content">
+                    <img alt="" src="/icons/thumbs-up.svg">
+                    <span class="movie-rating"><span class="visually-hidden"></span></span>
+                </div>
+            </div>
+            <button value="cancel" class="dialog-close-button button">
+                <img alt="" src="/icons/remove.svg">
+                <span class="visually-hidden">Sluit venster</span>
+            </button>
+        </dialog>
+
+        <dialog id="edit-movie-dialog">
+
+            <h2 class="edit-movie-dialog-title">Edit your movie</h2>
+
+            <form method="dialog" class="edit-movie-form" data-edit-movie-form>
+
+                <label for="movie-input">Movie:</label>
+                <input type="text" id="movie-input" name="movie"></input>
+                <input type="hidden" id="movie-key" name="movie-key"></input>
+    
+                <label for="date-input">Date:</label>
+                <input type="date" id="date-input" name="date"></input>
+    
+                <label for="description-input">Description:</label>
+                <textarea id="description-input" name="description"></textarea>
+    
+                <fieldset class="rating" data-rating>
+                    <legend class="rating-legend">How do you rate your movie?</legend>
+                
+                    <div class="ratings">
+                        <div class="visually-hidden">
+                            <label for="rating-0" class="rating-label">
+                                <input id="rating-0" type="radio" name="rating" value="geen waardering" class="rating-input visually-hidden" data-rating-input checked>
+                                <span class="rating-custom"><span class="rating-text visually-hidden">Geen waardering</span></span>
+                            </label>
+                        </div>
+                        <label for="rating-1" class="rating-label">
+                            <input id="rating-1" type="radio" name="rating" value="1" class="rating-input visually-hidden" data-rating-input>
+                            <span class="rating-custom"><span class="rating-text visually-hidden">Erg slecht</span></span>
+                        </label>
+                        <label for="rating-2" class="rating-label">
+                            <input id="rating-2" type="radio" name="rating" value="2" class="rating-input visually-hidden" data-rating-input>
+                            <span class="rating-custom"><span class="rating-text visually-hidden">Slecht</span></span>
+                        </label>
+                        <label for="rating-3"class="rating-label">
+                            <input id="rating-3" type="radio" name="rating" value="3" class="rating-input visually-hidden" data-rating-input>
+                            <span class="rating-custom"><span class="rating-text visually-hidden">Oke</span></span>
+                        </label>
+                        <label for="rating-4" class="rating-label">
+                            <input id="rating-4" type="radio" name="rating" value="4" class="rating-input visually-hidden" data-rating-input>
+                            <span class="rating-custom"><span class="rating-text visually-hidden">Goed</span></span>
+                        </label>
+                        <label for="rating-5" class="rating-label">
+                            <input id="rating-5" type="radio" name="rating" value="5" class="rating-input visually-hidden" data-rating-input>
+                            <span class="rating-custom"><span class="rating-text visually-hidden">Erg goed</span></span>
+                        </label>
+                    </div>
+                </fieldset>
+    
+                <button type="submit" value="submit" class="button" data-add-movie-button>
+                    Update movie
+                </button>
+                <button value="cancel" class="secondary-button">
+                    Annuleren
+                </button>
+            </form>
+
+        </dialog>
+    </main>
+    <footer class="footer">
+        HUMDB © 2020
+    </footer>
+</body>
+</html>

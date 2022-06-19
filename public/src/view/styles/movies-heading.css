@@ -1,0 +1,54 @@
+.movies-heading {
+    max-width: 680px;
+}
+
+@media only screen and (min-width: 720px) {
+    .movies-heading {
+        margin: 0 auto var(--spacing-large);
+    }
+}
+
+.movies-heading-title {
+    margin-bottom: var(--spacing);
+}
+
+@media only screen and (max-width: 719px) {
+    .movies-heading {
+        margin: 0 var(--spacing) var(--spacing-large);
+    }
+
+    .movies-heading-actions-form {
+        padding: var(--spacing) var(--spacing-small);
+        margin-bottom: var(--spacing);
+    }
+
+    .movies-heading-actions-form div:first-child {
+        margin-bottom: var(--spacing);
+    }
+
+    .movies-headings-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.movies-heading-actions-label {
+    display: inline;
+}
+
+@media only screen and (min-width: 720px) {
+    .movies-heading-actions {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .movies-heading-actions-form {
+        display: flex;
+    }
+
+    .movies-heading-actions-form > div:after {
+        content: '|';
+        font-weight: bold;
+        margin: 0 1rem
+    }
+}
